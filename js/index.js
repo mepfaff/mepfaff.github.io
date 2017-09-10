@@ -2,9 +2,6 @@ var moveAbout, logoMove;
 
 $(function() {
   
-  moveAbout = true;
-  logoMove = true;
-  
   // get the three nav buttons
   var aboutBtn = $(".about-button");
   var portBtn = $(".port-button");
@@ -15,7 +12,11 @@ $(function() {
   var portLink = $(".port-link");
   var contactLink = $(".contact-link");
   
-  
+  // initialize about and logo animations
+  logoMove = true;
+  moveAbout = true;
+  $(".about-section").css("opacity", "0");
+	
 
   /*
 * Checks if the given element is in view
@@ -156,20 +157,24 @@ $(function() {
 * Handles behavior once a nav button is clicked
 */
   var handleClick = function(e) {};
+    
+  var animateAbout = function(){
+    if (moveAbout){
+      
+      $(".about-section").delay(500).animate({top: "-=10", opacity: 1}, 1000);    
+      moveAbout = false;
+    }
+  }
   
-   
   // checks navbar
   if (checkNavbar())
     navbarFixedOn();
   else
     navbarFixedOff();
   
-  var animateAbout = function(){
-    if (moveAbout){
-      $(".about-section").css("opacity", "0");
-      $(".about-section").delay(500).animate({top: "-=10", opacity: 1}, 1000);    
-      moveAbout = false;
-    }
+  // checks about
+  if (isScrolledIntoView(aboutLink)) {
+      animateAbout();
   }
   
 });
