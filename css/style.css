@@ -46,8 +46,20 @@ body {
   position: relative;
   top: -10px;
   opacity: 0;
-  color: #ddd;
   font-family: 'Nixie One', cursive;
+}
+
+#navbar-name a {
+	text-decoration: none;
+	color: #ddd;
+}
+
+#navbar-name a:hover {
+	-webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+  color: #aaa;
 }
 
 
@@ -185,10 +197,6 @@ body {
 }
 
 .resume a {
-	-webkit-transition: color 0.3s ease-out;
-	-moz-transition: color 0.3s ease-out;
-	-o-transition: color 0.3s ease-out;
-	transition: color 0.3s ease-out;
 	color: #74c7af;
 	font-size: 1.1em;
 	-webkit-transition: letter-spacing 0.3s ease-out;
@@ -200,7 +208,6 @@ body {
 
 .resume a:hover{
 	text-decoration: none;
-	color: #4da088;
 	letter-spacing: 1.5px;
 }
 
