@@ -2,32 +2,55 @@ body {
   background: #fafafa;
 }
 .greeting {
-  height: 140px;
-  padding-top: 35px;
-
+  height: 165px;
+  padding-top: 25px;
 }
 
-.greeting h2, 
-.greeting h4 {
+.greeting h2 {
   text-align: center;
+  font-family: 'Nixie One', cursive; 
+  font-size: 3em;
+  color: #404040;
+}
+
+.greeting h3 {
+  text-align: center;
+  font-family: 'Nixie One', cursive; 
+  color: #7fc7af;
+  margin-top: -5px;
 }
 
 .navbar,
 .navbar-header,
 .ghost-nav {
-  background: #404040;
   height: 56px;
   border: none;
+}
+
+.navbar,
+.navbar-header {
+	background: #404040;
 }
 
 .navbar-nav {
   margin-top: 0px;
 }
 
+.navbar-name {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+  color: #ddd;
+  font-family: 'Nixie One', cursive;
+}
+
+
 #collapsed1 li {
   z-index: 1;
   background: #404040;
+  right: 0px;
 }
+
 
 .navbar-default .navbar-nav>li>a {
   -webkit-transition: color 0.3s ease-out;
@@ -35,6 +58,7 @@ body {
   -o-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
   color: #aaa;
+  height: 56px;
 }
 
 .navbar-default .navbar-nav>li>a:hover {
@@ -69,13 +93,6 @@ body {
   color: #fafafa;
 }
 
-.navbar-name {
-  position: relative;
-  top: 10px;
-  opacity: 0;
-  color: #ddd;
-}
-
 .ghost-nav {
   margin-bottom: 20px;
 }
@@ -88,7 +105,7 @@ body {
    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.1);
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,.1);
   box-shadow: 0 1px 3px rgba(0,0,0,.1);
-  margin: 25px 5px;
+  margin: 25px 10px;
   max-width: 630px;
 }
 

@@ -166,7 +166,7 @@ $(function() {
   var animateAbout = function(){
     if (moveAbout){
       $(".about-section").css("opacity", "0");
-      $(".about-section").animate({top: "-=10", opacity: 1}, 1000);    
+      $(".about-section").delay(500).animate({top: "-=10", opacity: 1}, 1000);    
       moveAbout = false;
     }
   }
