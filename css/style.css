@@ -49,6 +49,7 @@ body {
   z-index: 1;
   background: #404040;
   right: 0px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -111,6 +112,9 @@ body {
 
 .thumbnail img {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
   width: 100%;
   margin: 0px;
@@ -118,7 +122,7 @@ body {
 }
 
 .thumbnail img:hover {
-  opacity: .7;
+  opacity: .8;
 }
 
 .caption {
@@ -146,7 +150,9 @@ body {
 
 .about-section p {
 	color: #888;
+	font-size: 1.1em;
 	line-height: 1.7em;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .port-footer {
@@ -156,16 +162,32 @@ body {
 
 .contact-box {
   text-align: center;
+  
 }
 
 .email {
-  color: #fafafa;
   padding-top: 50px;
+  font-family: 'Nixie One', cursive;
+}
+
+.email a {
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
+	color: #fafafa;
+	
+}
+
+.email a:hover {
+	text-decoration: none;
+	color: #7fc7af;
 }
 
 .copyright {
   color: #aaa;
   line-height: .5em;
+  font-family: 'Nixie One', cursive;
 }
 
 .social-media {
