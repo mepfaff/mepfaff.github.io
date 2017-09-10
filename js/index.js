@@ -95,9 +95,8 @@ $(function() {
     $(".ghost-nav").removeClass("hidden");
     
     // make logo fade in
-    //$(".navbar-name").fadeIn(500);
     if (logoMove){
-      $(".navbar-name").animate({left: "+=10", opacity: 1}, 300);
+      $("#navbar-name").animate({left: "+=10", opacity: 1}, 300);
       logoMove = false;
     }
   }
@@ -109,11 +108,9 @@ $(function() {
     $(".navbar").removeClass("navbar-fixed-top");
     $(".ghost-nav").addClass("hidden");
     
-    // make logo fade out
-    //$(".navbar-name").fadeOut(400);
-    
+    // make logo fade out   
     if (!logoMove){
-      $(".navbar-name").animate({left: "-=10", opacity: 0}, 300);
+      $("#navbar-name").animate({left: "-=10", opacity: 0}, 300);
       logoMove = true;
     } 
     

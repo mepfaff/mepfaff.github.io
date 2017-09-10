@@ -36,9 +36,9 @@ body {
   margin-top: 0px;
 }
 
-.navbar-name {
+#navbar-name {
   position: relative;
-  top: 10px;
+  top: -10px;
   opacity: 0;
   color: #ddd;
   font-family: 'Nixie One', cursive;
@@ -114,6 +114,7 @@ body {
   transition: opacity 0.3s ease-out;
   width: 100%;
   margin: 0px;
+  padding: 8px;
 }
 
 .thumbnail img:hover {
@@ -121,16 +122,20 @@ body {
 }
 
 .caption {
-  text-align: center;
   font-family: 'Nixie One', cursive;
-  color: #aaa;
+}
+
+.caption h4,
+.caption p {
+	color: #333;
 }
 
 .about-section {
   position: relative;
   opacity: 1;
-  top: 0px;
-  padding: 10px 40px 40px 30px;
+  top: 20px;
+  padding: 0px 40px 60px 30px;
+  float: left;
 }
 
 .about-section h3 {
@@ -211,7 +216,4 @@ body {
     background: none;
   }
   
-  .about-section {
-    margin: 10px 5px 40px 40px;
-  }
 }
