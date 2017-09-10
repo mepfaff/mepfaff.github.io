@@ -1,3 +1,4 @@
+
 body {
   background: #fafafa;
 }
@@ -11,6 +12,7 @@ body {
   font-family: 'Nixie One', cursive; 
   font-size: 3em;
   color: #404040;
+
 }
 
 .greeting h3 {
@@ -18,6 +20,7 @@ body {
   font-family: 'Nixie One', cursive; 
   color: #7fc7af;
   margin-top: -5px;
+  font-weight: bold;
 }
 
 .navbar,
@@ -137,19 +140,30 @@ body {
 	color: #333;
 }
 
-.about-section {
+
+
+.about-section,
+.resume {
   position: relative;
   opacity: 1;
-  top: 20px;
-  padding: 0px 40px 60px 30px;
   float: left;
 }
 
+.about-section {
+	top: 20px;	
+	 padding: 0px 40px 0px 30px;
+}
+
+.resume {
+	top: 10px;
+	padding: 0px 40px 60px 30px;
+}
+
+
 .about-section h3 {
-	font-family: 'Nixie One', cursive;
 	font-size: 2.5em;
-	color: #7fc7af;
 	padding-top: 20px;
+	color: #74c7af;
 }
 
 .about-section p {
@@ -157,6 +171,37 @@ body {
 	font-size: 1.1em;
 	line-height: 1.7em;
 	font-family: 'Open Sans', sans-serif;
+	padding-top: 5px;
+}
+
+.about-section h3,
+.resume a {
+	font-family: 'Nixie One', cursive;
+}
+
+.resume h4 {
+	font-weight: bold;
+	padding-top: 25px;
+}
+
+.resume a {
+	-webkit-transition: color 0.3s ease-out;
+	-moz-transition: color 0.3s ease-out;
+	-o-transition: color 0.3s ease-out;
+	transition: color 0.3s ease-out;
+	color: #74c7af;
+	font-size: 1.1em;
+	-webkit-transition: letter-spacing 0.3s ease-out;
+	-moz-transition: letter-spacing 0.3s ease-out;
+	-o-transition: letter-spacing 0.3s ease-out;
+	transition: letter-spacing 0.3s ease-out;
+	letter-spacing: 1px;
+}
+
+.resume a:hover{
+	text-decoration: none;
+	color: #4da088;
+	letter-spacing: 1.5px;
 }
 
 .port-footer {

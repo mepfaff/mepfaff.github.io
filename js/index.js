@@ -16,6 +16,7 @@ $(function() {
   logoMove = true;
   moveAbout = true;
   $(".about-section").css("opacity", "0");
+  $(".resume").css("opacity", "0");
 	
 
   /*
@@ -170,7 +171,8 @@ $(function() {
   var animateAbout = function(){
     if (moveAbout){
       
-      $(".about-section").delay(500).animate({top: "-=10", opacity: 1}, 1000);    
+      $(".about-section").delay(500).animate({top: "-=10", opacity: 1}, 1000);
+	  $(".resume").delay(1100).animate({top: "-=10", opacity: 1}, 1000);
       moveAbout = false;
     }
   }
