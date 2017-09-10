@@ -136,20 +136,28 @@ body {
   transition: opacity 0.3s ease-out;
   width: 100%;
   margin: 0px;
-  padding: 8px;
+  padding: 10px;
 }
 
 .thumbnail img:hover {
   opacity: .8;
 }
 
-.caption {
-  font-family: 'Nixie One', cursive;
+.caption p,
+.caption h4 {
+	padding-left: 10px;
 }
 
-.caption h4,
 .caption p {
-	color: #333;
+  font-family: 'Open Sans', sans-serif;
+  color: #aaa;
+}
+
+.caption h4 {
+	font-family: 'Nixie One', cursive;
+	color: #404040;
+	font-weight: bold;
+	padding-bottom: 5px;
 }
 
 
