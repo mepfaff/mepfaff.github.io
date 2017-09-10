@@ -186,4 +186,24 @@ $(function() {
   // checks where we are on page
   checkScroll();
   
+  /*
+  *	Close navbar dropdown when link is clicked
+  */
+	$(".navbar-right li").click(function(){
+		
+		$(".navbar-collapse").removeClass("in");
+		
+	});
+  
 });
+
+
+
+
+
+
+
+
+
+
+
