@@ -26,7 +26,9 @@ body {
 .navbar-fixed-top {
   height: 56px;
   border: none;
+  border-radius: 0px;
 }
+
 
 .navbar,
 .navbar-header {
@@ -239,4 +241,10 @@ body {
     background: none;
   }
   
+  .caption p {
+	  height: 2em;
+  }
 }
+
+
+
