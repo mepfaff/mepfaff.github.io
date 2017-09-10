@@ -122,6 +122,8 @@ body {
 
 .caption {
   text-align: center;
+  font-family: 'Nixie One', cursive;
+  color: #aaa;
 }
 
 .about-section {
@@ -129,6 +131,17 @@ body {
   opacity: 1;
   top: 0px;
   padding: 10px 40px 40px 30px;
+}
+
+.about-section h3 {
+	font-family: 'Nixie One', cursive;
+	font-size: 2.5em;
+	color: #7fc7af;
+}
+
+.about-section p {
+	color: #888;
+	line-height: 1.7em;
 }
 
 .port-footer {
@@ -166,7 +179,7 @@ body {
   height: 40px;
   width: 40px;
   border-radius: 20px;
-  background: #fafafa;
+  background: #7fc7af;
   text-align: center;
   float: left;
   margin: 4px;
@@ -178,7 +191,7 @@ body {
 
 .soc-btn:hover {
   text-decoration: none;
-  background: #aaa;
+  background: #ddd;
 }
   
 }
