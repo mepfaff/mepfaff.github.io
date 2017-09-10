@@ -56,17 +56,21 @@ $(function() {
       navbarFixedOff();
     
     // checks which section of the page is in view
-    if (isScrolledIntoView(contactLink)) {
-      setActive(contactBtn);
-      removeActive(portBtn, aboutBtn);
-    } else if (isScrolledIntoView(aboutLink)) {
-      setActive(aboutBtn);
-      removeActive(portBtn, contactBtn);
-      animateAbout();
-    } else {
+    if  (isScrolledIntoView(portLink)){
       setActive(portBtn);
       removeActive(aboutBtn, contactBtn);
     }
+	
+	if (isScrolledIntoView(aboutLink)) {
+      setActive(aboutBtn);
+      removeActive(portBtn, contactBtn);
+      animateAbout();
+    } 
+	
+	if (isScrolledIntoView(contactLink)) {
+      setActive(contactBtn);
+      removeActive(portBtn, aboutBtn);
+    } 
 
   });
 
