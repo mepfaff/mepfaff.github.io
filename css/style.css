@@ -22,7 +22,8 @@ body {
 
 .navbar,
 .navbar-header,
-.ghost-nav {
+.ghost-nav,
+.navbar-fixed-top {
   height: 56px;
   border: none;
 }
