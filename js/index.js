@@ -45,6 +45,28 @@ $(function() {
     );
   };
 
+  
+  var checkScroll = function(){
+	  // checks which section of the page is in view
+    if  (isScrolledIntoView(portLink)){
+      setActive(portBtn);
+      removeActive(aboutBtn, contactBtn);
+    }
+	
+	if (isScrolledIntoView(contactLink)) {
+      setActive(contactBtn);
+      removeActive(portBtn, aboutBtn);
+    } 
+	
+	if (isScrolledIntoView(aboutLink)) {
+		if (!(isScrolledIntoView(contactLink))){
+			setActive(aboutBtn);
+			removeActive(portBtn, contactBtn);
+		}
+      animateAbout();
+    }
+  }
+  
   /*
 * Every time window is scrolled, update navbar
 */
@@ -56,22 +78,9 @@ $(function() {
     else
       navbarFixedOff();
     
-    // checks which section of the page is in view
-    if  (isScrolledIntoView(portLink)){
-      setActive(portBtn);
-      removeActive(aboutBtn, contactBtn);
-    }
+    checkScroll(); 
 	
-	if (isScrolledIntoView(aboutLink)) {
-      setActive(aboutBtn);
-      removeActive(portBtn, contactBtn);
-      animateAbout();
-    } 
-	
-	if (isScrolledIntoView(contactLink)) {
-      setActive(contactBtn);
-      removeActive(portBtn, aboutBtn);
-    } 
+	 
 
   });
 
@@ -172,9 +181,7 @@ $(function() {
   else
     navbarFixedOff();
   
-  // checks about
-  if (isScrolledIntoView(aboutLink)) {
-      animateAbout();
-  }
+  // checks where we are on page
+  checkScroll();
   
 });
