@@ -1,4 +1,4 @@
-var moveAbout, logoMove;
+var moveAbout, logoMove, moveSoc;
 
 $(function() {
   
@@ -11,12 +11,34 @@ $(function() {
   var aboutLink = $(".about-link");
   var portLink = $(".port-link");
   var contactLink = $(".contact-link");
+  var soc = $("#soc-btn0");
   
   // initialize about and logo animations
   logoMove = true;
   moveAbout = true;
+	moveSoc = true;
   $(".about-section").css("opacity", "0");
   $(".resume").css("opacity", "0");
+	
+  for (var i = 0; i < 4; i++) {
+	var id = "#soc-btn" + i;
+	$(id).css("opacity", "0");
+  }
+
+
+  var animateSoc = function(){
+    if (moveSoc){
+      
+      for (var i = 0; i < 4; i++) {
+        var id = "#soc-btn" + i;
+        var delay = 50 + (i * 150)
+        $(id).delay(delay).animate({top: "-=5", opacity: 1}, 500);;
+      }      
+
+      moveSoc = false;
+    }
+}
+
 	
 
   /*
@@ -48,7 +70,10 @@ $(function() {
 
   
   var checkScroll = function(){
-	  // checks which section of the page is in view
+	// checks which section of the page is in view
+    if (isScrolledIntoView(soc))
+      animateSoc();    
+
     if  (isScrolledIntoView(portLink)){
       setActive(portBtn);
       removeActive(aboutBtn, contactBtn);
@@ -57,6 +82,7 @@ $(function() {
 	if (isScrolledIntoView(contactLink)) {
       setActive(contactBtn);
       removeActive(portBtn, aboutBtn);
+      
     } 
 	
 	if (isScrolledIntoView(aboutLink)) {
@@ -196,14 +222,3 @@ $(function() {
 	});
   
 });
-
-
-
-
-
-
-
-
-
-
-
